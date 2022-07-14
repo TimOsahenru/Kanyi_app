@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+    <a href="/">&#8592; back</a>
+</div>
+
+<div class="card-body-detail">
+    <h4>{{task.description}}</h4>
+
+{% if task.completed %}
+<h5>Task completed</h5>
+
+{% else %}
+<h5>Task incomplete</h5>
+
+{% endif %}
+<h4>{{task.created_at}}</h4>
+</div>
+
+{% endblock content %}
